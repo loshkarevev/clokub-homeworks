@@ -61,12 +61,12 @@ resource "aws_nat_gateway" "NATgw" {
 
 resource "aws_ec2_client_vpn_endpoint" "vpn_endpoint" {
   description            = "terraform-clientvpn-endpoint"
-  server_certificate_arn = "arn:aws:acm:us-east-2:864930020354:certificate/4c835791-f6e6-4317-b340-95445e543101"
+  server_certificate_arn = "arn:aws:acm:us-east-2:***"
   client_cidr_block      = "172.31.0.0/16"
 
   authentication_options {
     type                       = "certificate-authentication"
-    root_certificate_chain_arn = "arn:aws:acm:us-east-2:864930020354:certificate/9d35eccb-f102-4d70-b381-58692b273f94"
+    root_certificate_chain_arn = "arn:aws:acm:us-east-2:***"
   }
 
   connection_log_options {
